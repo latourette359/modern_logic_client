@@ -7,9 +7,10 @@ Method | HTTP request | Description
 [**customer_customer_id_executions_get**](ExecutionsApi.md#customer_customer_id_executions_get) | **GET** /customer/{customerId}/executions | List Customer Executions
 [**execution_execution_id_get**](ExecutionsApi.md#execution_execution_id_get) | **GET** /execution/{executionId} | Get Execution Details
 [**execution_execution_id_resume_post**](ExecutionsApi.md#execution_execution_id_resume_post) | **POST** /execution/{executionId}/resume | Resume Execution
+[**execution_get**](ExecutionsApi.md#execution_get) | **GET** /execution | List executions
 
 # **customer_customer_id_executions_get**
-> InlineResponse2008 customer_customer_id_executions_get(customer_id, page_size=page_size, page_number=page_number)
+> InlineResponse2004 customer_customer_id_executions_get(customer_id, page_size=page_size, page_number=page_number)
 
 List Customer Executions
 
@@ -46,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -151,6 +152,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **execution_get**
+> InlineResponse2004 execution_get(page_size=page_size, page_number=page_number, alert_type=alert_type, before=before, after=after)
+
+List executions
+
+### Example
+```python
+from __future__ import print_function
+import time
+import modern_logic_client
+from modern_logic_client.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = modern_logic_client.ExecutionsApi(modern_logic_client.ApiClient(configuration))
+page_size = 56 # int | Number of elements to return (default is 10) (optional)
+page_number = 56 # int | Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero (optional)
+alert_type = 'alert_type_example' # str | The alert status of this execution (optional)
+before = '2013-10-20' # date | Filter executions to those that occurred before the given date. (optional)
+after = '2013-10-20' # date | Filter executions to those that occurred after the given date. (optional)
+
+try:
+    # List executions
+    api_response = api_instance.execution_get(page_size=page_size, page_number=page_number, alert_type=alert_type, before=before, after=after)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ExecutionsApi->execution_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page_size** | **int**| Number of elements to return (default is 10) | [optional] 
+ **page_number** | **int**| Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero | [optional] 
+ **alert_type** | **str**| The alert status of this execution | [optional] 
+ **before** | **date**| Filter executions to those that occurred before the given date. | [optional] 
+ **after** | **date**| Filter executions to those that occurred after the given date. | [optional] 
+
+### Return type
+
+[**InlineResponse2004**](InlineResponse2004.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

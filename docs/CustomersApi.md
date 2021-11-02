@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **customer_get**
-> InlineResponse2007 customer_get(page_size=page_size, page_number=page_number)
+> InlineResponse2008 customer_get(page_size=page_size, page_number=page_number)
 
 List Customers
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

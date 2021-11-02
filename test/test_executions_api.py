@@ -49,6 +49,13 @@ class TestExecutionsApi(unittest.TestCase):
         """
         pass
 
+    def test_execution_get(self):
+        """Test case for execution_get
+
+        List executions  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
