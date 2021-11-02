@@ -136,7 +136,12 @@ class AlertsApi(object):
         :param async_req bool
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2006
+        :param str assigned_to: The username of the user the alert is assigned to
+        :param str assigned_to_team: The name of the team the alert is assigned to
+        :param str workflow: The name of the workflow associated to the alert
+        :param date before: Filter alerts to those that occurred before the given date.
+        :param date after: Filter alerts to those that occurred after the given date.
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -158,12 +163,17 @@ class AlertsApi(object):
         :param async_req bool
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2006
+        :param str assigned_to: The username of the user the alert is assigned to
+        :param str assigned_to_team: The name of the team the alert is assigned to
+        :param str workflow: The name of the workflow associated to the alert
+        :param date before: Filter alerts to those that occurred before the given date.
+        :param date after: Filter alerts to those that occurred after the given date.
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['page_size', 'page_number']  # noqa: E501
+        all_params = ['page_size', 'page_number', 'assigned_to', 'assigned_to_team', 'workflow', 'before', 'after']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -188,6 +198,16 @@ class AlertsApi(object):
             query_params.append(('pageSize', params['page_size']))  # noqa: E501
         if 'page_number' in params:
             query_params.append(('pageNumber', params['page_number']))  # noqa: E501
+        if 'assigned_to' in params:
+            query_params.append(('assignedTo', params['assigned_to']))  # noqa: E501
+        if 'assigned_to_team' in params:
+            query_params.append(('assignedToTeam', params['assigned_to_team']))  # noqa: E501
+        if 'workflow' in params:
+            query_params.append(('workflow', params['workflow']))  # noqa: E501
+        if 'before' in params:
+            query_params.append(('before', params['before']))  # noqa: E501
+        if 'after' in params:
+            query_params.append(('after', params['after']))  # noqa: E501
 
         header_params = {}
 
@@ -210,7 +230,7 @@ class AlertsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',  # noqa: E501
+            response_type='InlineResponse2007',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

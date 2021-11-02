@@ -139,7 +139,7 @@ class DataSourcesApi(object):
         :param int datasource_id: Specified workflow to run, to evaluate the target user. (required)
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -162,7 +162,7 @@ class DataSourcesApi(object):
         :param int datasource_id: Specified workflow to run, to evaluate the target user. (required)
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -220,7 +220,7 @@ class DataSourcesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',  # noqa: E501
+            response_type='InlineResponse2006',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -334,7 +334,7 @@ class DataSourcesApi(object):
         :param async_req bool
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2004
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -356,7 +356,7 @@ class DataSourcesApi(object):
         :param async_req bool
         :param int page_size: Number of elements to return (default is 10)
         :param int page_number: Lists are ordered by creation date ascending. To return the first page, set pageNumber to zero
-        :return: InlineResponse2004
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -408,7 +408,7 @@ class DataSourcesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='InlineResponse2005',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

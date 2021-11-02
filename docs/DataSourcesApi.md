@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **datasource_datasource_id_calls_get**
-> InlineResponse2005 datasource_datasource_id_calls_get(datasource_id, page_size=page_size, page_number=page_number)
+> InlineResponse2006 datasource_datasource_id_calls_get(datasource_id, page_size=page_size, page_number=page_number)
 
 List Data Source Calls
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **datasource_get**
-> InlineResponse2004 datasource_get(page_size=page_size, page_number=page_number)
+> InlineResponse2005 datasource_get(page_size=page_size, page_number=page_number)
 
 List Data Sources
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
