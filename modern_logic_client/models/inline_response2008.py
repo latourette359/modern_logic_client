@@ -29,7 +29,7 @@ class InlineResponse2008(ListResponse):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'items': 'list[Execution]'
+        'items': 'list[CustomerItem]'
     }
     if hasattr(ListResponse, "swagger_types"):
         swagger_types.update(ListResponse.swagger_types)
@@ -54,7 +54,7 @@ class InlineResponse2008(ListResponse):
 
 
         :return: The items of this InlineResponse2008.  # noqa: E501
-        :rtype: list[Execution]
+        :rtype: list[CustomerItem]
         """
         return self._items
 
@@ -64,7 +64,7 @@ class InlineResponse2008(ListResponse):
 
 
         :param items: The items of this InlineResponse2008.  # noqa: E501
-        :type: list[Execution]
+        :type: list[CustomerItem]
         """
 
         self._items = items
